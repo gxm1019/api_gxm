@@ -42,7 +42,7 @@ GET https://api1.zg.com/tickers
 ##### 字段说明
 
 字段名| 说明 
-- | :-
+-| :-
 timestamp | 时间戳(毫秒)
 buy  | 最佳BID
 high | 最高价
@@ -94,14 +94,14 @@ GET https://api1.zg.com/depth?symbol=BTC_USDT&size=1
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 symbol | 交易对 (大小写敏感) | string
 size | 返回深度的数量 | int
 
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 asks | ASK深度 [价格,数量]
 bids  | bid深度 [价格,数量]
 --------------------- 
@@ -136,14 +136,14 @@ GET https://api1.zg.com/trades?symbol=BTC_USDT&size=2
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 symbol | 交易对 (大小写敏感) | string
 size | 返回成交数的数量 | int
 
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 amount | 成交数量
 price  | 成交价
 side   | 买卖方向
@@ -213,7 +213,7 @@ GET https://api1.zg.com/kline?symbol=ltc_btc&type=1min&size=100
 ```
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 symbol | 交易对 (大小写敏感) | string
 size | 返回K线的数量 | int
 type | 分时参数，可以为1min,5min,15min,30min,hour,day,week
@@ -252,7 +252,7 @@ GET https://api1.zg.com/exchagneInfo
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 baseAsset | 基础货币
 baseAssetPrecision  | 基础货币精度
 quoteAsset   | 计价货币精度
@@ -278,9 +278,9 @@ symbol | 交易对
 	"price": "50",
 	"amount": "0.02"
 }
-字符串为: amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&side=1&symbol=BTC_USDT
+字符串为: amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&side=1&symbol=BTC_USDT
 
-MD5签名 生成MD5签名必须要secretKey,在以上生成的字符串后面添加secret_key以生成最终的字符串，例如
+MD5签名 生成MD5签名必须要secretKey,在以上生成的字符串后面添加secret_key以生成最终的字符串，例如
 amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&side=1&symbol=BTC_USDT&secret_key=secretKey 
 ```
 
@@ -329,14 +329,14 @@ POST https://api1.zg.com/private/user
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 api_key | api_key | string
 sign | 签名 | string 
 
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 available | 可用余额
 freeze  | 交易冻结金额
 other_freeze   | 其他冻结金额(包括C2C和提币冻结)
@@ -385,7 +385,7 @@ POST https://api1.zg.com/private/trade/limit
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 api_key | api_key | string
 sign | 签名 | string 
 market |交易对(大小写敏感)|string
@@ -396,11 +396,11 @@ price | 价格 |string
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 amount | 数量
 ctime  | 创建时间
 deal_fee   | 成交手续费
-deal_money | 成交金额
+deal_money | 成交金额
 deal_stock | 成交资产 
 id | 订单号
 left | 剩余
@@ -411,7 +411,7 @@ price | 价格
 side | 1为ASK卖出，2为BID买入
 source | 来源
 taker_fee | taker手续费
-type| 交易类型，1为限价，2为市价
+type| 交易类型，1为限价，2为市价
 user| 用户编号
 ---------------------
 
@@ -453,7 +453,7 @@ POST https://api1.zg.com/private/trade/market
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 api_key | api_key | string
 sign | 签名 | string 
 market |交易对(大小写敏感)|string
@@ -463,11 +463,11 @@ amount | 数量|string
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 amount | 数量
 ctime  | 创建时间
 deal_fee   | 成交手续费
-deal_money | 成交金额
+deal_money | 成交金额
 deal_stock | 成交资产 
 id | 订单号
 left | 剩余
@@ -478,7 +478,7 @@ price | 价格
 side | 1为ASK卖出，2为BID买入
 source | 来源
 taker_fee | taker手续费
-type| 交易类型，1为限价，2为市价
+type| 交易类型，1为限价，2为市价
 user| 用户编号
 ---------------------
 
@@ -531,7 +531,7 @@ POST https://api1.zg.com/private/trade/cancel
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 api_key | api_key | string
 sign | 签名 | string 
 market |交易对(大小写敏感)|string
@@ -540,11 +540,11 @@ order_id | 订单号 |string
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 amount | 数量
 ctime  | 创建时间
 deal_fee   | 成交手续费
-deal_money | 成交金额
+deal_money | 成交金额
 deal_stock | 成交资产 
 id | 订单号
 left | 剩余
@@ -555,7 +555,7 @@ price | 价格
 side | 1为ASK卖出，2为BID买入
 source | 来源
 taker_fee | taker手续费
-type| 交易类型，1为限价，2为市价
+type| 交易类型，1为限价，2为市价
 user| 用户编号
 ---------------------
 ##### 错误信息
@@ -598,7 +598,7 @@ POST https://api1.zg.com/private/order/deals
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 api_key | api_key | string
 sign | 签名 | string 
 order_id | 订单号 |string
@@ -608,11 +608,11 @@ limit | 查询数据量 |int
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
+-| :- 
 limit| 查询数量(最大值为1000)
 offset| 偏移
 records| 记录
-amount| 数量
+amount| 数量
 deal| 已成交
 deal_order_id| 成交的订单id
 fee| 手续费
@@ -666,7 +666,7 @@ POST https://api1.zg.com/private/order/pending
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 api_key | api_key | string
 sign | 签名 | string 
 market |交易对(大小写敏感)|string
@@ -676,11 +676,11 @@ limit | 查询数据量 |int
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
-amount| 数量
+-| :- 
+amount| 数量
 ctime| 创建时间
 deal_fee| 成交手续费
-deal_money| 成交金额
+deal_money| 成交金额
 deal_stock| 成交资产
 id| 编号
 left| 剩余
@@ -691,7 +691,7 @@ price| 价格
 side| 1为ASK卖出，2为BID买入
 source|来源
 taker_fee| taker手续费
-type| 交易类型，1为限价，2为市价
+type| 交易类型，1为限价，2为市价
 user| 用户编号
 ---------------------
 
@@ -754,7 +754,7 @@ POST https://api1.zg.com/private/order/finished
 
 ##### 请求字段说明
 字段名| 说明 | 类型
-- | :- | :-
+-| :- | :-
 api_key | api_key | string
 sign | 签名 | string 
 market |交易对(大小写敏感)|string
@@ -766,11 +766,11 @@ end_time |结束时间，秒时间戳|int
 ##### 响应字段说明
 
 字段名| 说明 
-- | :- 
-amount| 数量
+-| :- 
+amount| 数量
 ctime| 创建时间
 deal_fee| 成交手续费
-deal_money| 成交金额
+deal_money| 成交金额
 deal_stock| 成交资产
 id| 订单号
 left| 剩余
@@ -781,7 +781,7 @@ price| 价格
 side| 1为ASK卖出，2为BID买入
 source|来源
 taker_fee| taker手续费
-type| 交易类型，1为限价，2为市价
+type| 交易类型，1为限价，2为市价
 user| 用户编号
 ---------------------
 
